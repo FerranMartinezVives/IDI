@@ -1,0 +1,11 @@
+VRP = centreEsfera = (Pmin + Pmax) / 2  //Pmin i Pmax punts mínim i màxim de la caixa contenidora
+Radi = distance(centreEsfera, Pmin) = distance(centreEsfera, Pmax) = distance(Pmin, Pmax) / 2
+OBS = VRP + d*(0, 0, 1)   //d valor arbitrari (1.5R, 2R, 3R...)
+FOV = 2 * alfa = 2 * arcsin(R / d)
+zNear = d - R
+zFar = d + R
+
+NO DEFORMACIONS:
+ra = ample / alt;
+if (ra >= 1) FOVnou = FOV; perspective(FOV, ra, zNear, zFar);
+else FOVnou = 2 * alfaNou = 2 * arctan(tan(alfa) / ranou); perspective(FOVnou, ra, zNear, zFar);
